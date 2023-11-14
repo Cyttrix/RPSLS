@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    internal abstract class Player
+    public abstract class Player
     {
         //Member Variabes (HAS A)
         public string name;
@@ -18,13 +18,13 @@ namespace RPSLS
         public Player(string name)
         {
             this.name = name;
-            gestures = new List<string> {"rock", "paper", "scissors", "lizard", "Spock" };
+            gestures = new List<string> {"Rock", "Paper", "Scissors", "Lizard", "Spock" };
             chosenGesture = "";
             score = 0;
         }
 
         //Member Methods (CAN DO)
         //This abstract method must be overridden by the child Player classes
-        public abstract void ChooseGesture();
+        public abstract string ChooseGesture();
     }
 }
